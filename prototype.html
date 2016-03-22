@@ -1,0 +1,40 @@
+<!--
+ * Cytonn Technologies
+ *
+ * @author: Hashim Amani <hamani@cytonn.com>
+ *
+ * Project: Javascript.
+ *
+ *-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head> 
+<body>
+
+      <script type="text/javascript">
+
+           function Student(name)
+           {
+           	   this.name = name;
+           }
+
+           Student.prototype.getName = function()
+           //Student.getName = function()
+           {
+           	   return this.name;
+           }
+
+           //this objects have inherited all the properties including the getName() function.
+
+           var s1 = new Student("Hashim");
+           var s2 = new Student("Amani");
+
+           document.write("Student 1 name =" + s1.getName() + "</br>");
+           document.write("Student 2 name =" + s2.getName() + "</br>");
+
+      </script>
+
+</body>
+</html>

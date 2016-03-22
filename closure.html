@@ -1,0 +1,44 @@
+<!--
+ * Cytonn Technologies
+ *
+ * @author: Hashim Amani <hamani@cytonn.com>
+ *
+ * Project: Javascript.
+ *
+ *-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+		<script type="text/javascript">
+
+					 function person(myName){
+					      
+					      //private variable
+					      var name = myName;
+
+					      //closure function
+					    return function get_name(){
+
+					           return name
+					      };
+
+					 }
+
+
+					 //the object
+
+					 var me = new person("hashim")
+					 
+					  //alert (me.name); //trying to access a private variable
+
+					 alert(me());//comment this and uncomment above to see the difference.  
+
+
+		</script>
+
+</body>
+</html>

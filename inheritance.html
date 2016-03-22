@@ -1,0 +1,67 @@
+<!--
+ * Cytonn Technologies
+ *
+ * @author: Hashim Amani <hamani@cytonn.com>
+ *
+ * Project: Javascript.
+ *
+ *-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+      
+        <script type="text/javascript">
+
+
+                   //function bugatti
+			        function bugatti () {
+			        	
+								this.speed = "1000 km/h";
+								this.isNew = true;
+								this.color = "Blue";
+								}
+
+								// Add the showSpeedandColor  method to the bugatti prototype property
+								bugatti.prototype.showSpeedandColor =  function () {
+								document.write(this.speed+ " and its color is " + this.color);
+								}
+
+								// Add the amINew method to the bugatti prototype property
+								bugatti.prototype.amINew = function () {
+								if (this.isNew)
+								document.write("I am New!");
+								}
+
+
+                    //function bugatti_veyron inherits bugatti
+					function bugatti_veyron (v_speed, v_color) {
+					this.speed = v_speed;
+					this.color = v_color;
+					}
+
+								// Set the bugatti_veyron's prototype to bugatti's constructor, thus inheriting all of bugatti prototype methods and properties.
+								bugatti_veyron.prototype = new bugatti ();
+
+								// Creates a new object, aBugatti, with the Bugatti constructor
+								
+			                    var the_bugatti = new bugatti();
+			                    var aBugatti = new bugatti_veyron("2000km/h", "Yellow");
+
+			                    document.write("a normal bugatti's speed is:") ;
+			                    the_bugatti.showSpeedandColor();
+								
+								document.write("</br>") ;
+			                    
+								// Uses the showSpeedAndColor method from the Bugatti_veyron object prototype, which is Bugatti.prototype. The aBugatti object inherits all the properties and methods from both the Bugatti and Buggati_veyron functions.
+								document.write("a bugatti veyron speed is:");
+								aBugatti.showSpeedandColor(); 
+
+        </script>
+
+
+
+</body>
+</html>
